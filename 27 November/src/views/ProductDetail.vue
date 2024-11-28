@@ -29,13 +29,39 @@
       </div>
     </div>
     </template>
-<style>
+<style scoped>
 .container {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.card {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button.btn {
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  opacity: 0.9;
+}
+
+.product-description {
+  line-height: 1.5;
+}
 </style>
