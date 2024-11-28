@@ -16,6 +16,11 @@ const searchName = () => {
   category.value = null;
   products.value = productsStore.filterProductsByCategoryName(null, searchText.value);
 }
+const resetFilters = () => {
+    category.value = null;
+    searchText.value = '';
+    filterProducts();
+};
 </script>
 
 <template>
@@ -36,7 +41,7 @@ const searchName = () => {
         <input type="text" class="form-control" value="Search by name" aria-label="readonly input example" v-model="searchText" @input="searchName">
       </div>
         <div class="col md-2">
-          <button type="button" class="btn btn-outline-warning">reset</button>
+          <button type="button" class="btn btn-outline-warning" @click="resetFilters">reset</button>
     
      
     </div>
@@ -51,7 +56,7 @@ const searchName = () => {
         <p class="card-text">Date:{{ product.publish_at }}</p>
         
         <div class="card-footer text-end">
-          <button type="button" class="btn btn-outline-info">Detail</button>
+          <router-link :to="`/product/${product.id}`" class="btn btn-outline-info me-2">Detail</router-link>
           <button type="button" class="btn btn-outline-success">Cart</button>
         </div>
       </div>
