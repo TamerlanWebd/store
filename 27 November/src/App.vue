@@ -16,7 +16,7 @@ import {RouterLink, RouterView } from 'vue-router'
           <router-link to="/" class="nav-link active">Home</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cart</a>
+          <router-link to="/cart" class="nav-link">Cart</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/about"class="nav-link">About</router-link>
@@ -27,3 +27,49 @@ import {RouterLink, RouterView } from 'vue-router'
 </nav>
   <RouterView />
 </template>
+<style scoped>
+.navbar {
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: #28a745; /* Green for active link */
+}
+
+.navbar-toggler-icon {
+  background-color: #007bff;
+}
+
+.navbar-brand {
+  color: #007bff !important;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+}
+
+.active-link {
+  color: #007bff !important;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 1rem;
+  }
+}
+</style>

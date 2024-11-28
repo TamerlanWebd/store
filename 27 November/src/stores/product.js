@@ -99,7 +99,11 @@ const filterProductsByCategoryName = computed(() => {
         return products.value;
     }
 });
-
+const findProductById = computed(() => {
+    return (id) => {
+        return products.value.find((product) => product.id == id)
+    }
+    });
 
 
 
@@ -109,5 +113,6 @@ const filterProductsByCategoryName = computed(() => {
 return {
     products,
     filterProductsByCategoryName,
+    findProductById
 }
 });

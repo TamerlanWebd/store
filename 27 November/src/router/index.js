@@ -7,6 +7,10 @@ const routes = [
   { path: '/', name: 'Home', component: HomeView },
   { path: '/about', name: 'About', component: AboutView },
   { path: '/product/:id', name: 'ProductDetail', component: ProductDetail },
+  {path: "/cart",
+  name: "cart",
+  component: () => import("../views/CartView.vue"),
+  },
 ];
 
 const router = createRouter({
